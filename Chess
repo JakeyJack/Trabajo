@@ -19,7 +19,11 @@ class ChessGame(tk.Tk):
         
         self.selected_piece = None
         self.create_board()
-        
+        def refresh_board(self):
+        for widget in self.winfo_children():
+            widget.destroy()
+        self.create_board()
+
     def create_board(self):
         for i in range(8):
             for j in range(8):
